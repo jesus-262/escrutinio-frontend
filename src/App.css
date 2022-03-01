@@ -1,0 +1,366 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Oswald', sans-serif;
+}
+body{
+  
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  
+}
+.iluminarlogin:hover {
+  box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+  outline-color: rgba(49, 138, 172, 0);
+  outline-offset: 80px;
+  text-shadow: 1px 1px 6px #fff;
+ 
+  }
+ 
+.abs-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+.abs-center2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 20vh;
+}
+
+.login{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(12, 16, 23, 1);
+    
+  }
+  .dupli{
+       padding-right: 120px;
+       margin: 20px;
+    
+  }
+  .botonexcel2{
+  
+    margin-left: 20px;
+ 
+}
+.custom-input-file {
+  background-color: #941B80;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 auto 0;
+  min-height: 15px;
+  overflow: hidden;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  width: 400px;
+}
+
+.custom-input-file .input-file {
+ border: 10000px solid transparent;
+ cursor: pointer;
+ font-size: 10000px;
+ margin: 0;
+ opacity: 0;
+ outline: 0 none;
+ padding: 0;
+ position: absolute;
+ right: -1000px;
+ top: -1000px;
+}
+ 
+
+/**********File Inputs**********/
+.container-input {
+  text-align: center;
+  background: #282828;
+  border-top: 5px solid #c39f77;
+  padding: 50px 0;
+  border-radius: 6px;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputfile + label {
+  max-width: 80%;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0.625rem 1.25rem;
+}
+
+.inputfile + label svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  fill: currentColor;
+  margin-top: -0.25em;
+  margin-right: 0.25em;
+}
+
+.iborrainputfile {
+font-size:10px; 
+font-weight:normal;
+font-family: 'Lato';
+}
+
+/* style 1 */
+
+.inputfile-1 + label {
+  color: #fff;
+  background-color: #c39f77;
+}
+
+.inputfile-1:focus + label,
+.inputfile-1.has-focus + label,
+.inputfile-1 + label:hover {
+  background-color: #9f8465;
+}
+
+/* style 2 */
+
+.inputfile-2 + label {
+  color: #c39f77;
+  border: 2px solid currentColor;
+}
+
+.inputfile-2:focus + label,
+.inputfile-2.has-focus + label,
+.inputfile-2 + label:hover {
+  color: #9f8465;
+}
+
+/* style 3 */
+
+.inputfile-3 + label {
+  color: #fff;
+}
+
+.inputfile-3:focus + label,
+.inputfile-3.has-focus + label,
+.inputfile-3 + label:hover {
+  color: #c39f77;
+}
+
+/* style 4 */
+
+.inputfile-4 + label {
+  color: #fff;
+}
+
+.inputfile-4:focus + label,
+.inputfile-4.has-focus + label,
+.inputfile-4 + label:hover {
+  color: #c39f77;
+}
+
+/* style 5 */
+
+.inputfile-5 + label {
+  color: #c39f77;
+}
+
+.inputfile-5:focus + label,
+.inputfile-5.has-focus + label,
+.inputfile-5 + label:hover {
+  color: #9f8465;
+}
+
+.inputfile-5 + label figure {
+  width: 80px;
+  height: 80x;
+  border-radius: 50%;
+  background-color: #c39f77;
+  display: block;
+  padding: 20px;
+  margin: 0 auto 10px;
+}
+
+.inputfile-5:focus + label figure,
+.inputfile-5.has-focus + label figure,
+.inputfile-5 + label:hover figure {
+  background-color: #9f8465;
+}
+
+.inputfile-5 + label svg {
+  width: 100%;
+  height: 100%;
+  fill: #fff;
+}
+
+/* style 6 */
+
+.inputfile-6 + label {
+  color: #c39f77;
+}
+
+.inputfile-6:focus + label,
+.inputfile-6.has-focus + label,
+.inputfile-6 + label:hover {
+  color: #9f8465;
+}
+
+.inputfile-6 + label figure {
+  width: 100px;
+  height: 135px;
+  background-color: #c39f77;
+  display: block;
+  position: relative;
+  padding: 30px;
+  margin: 0 auto 10px;
+}
+
+.inputfile-6:focus + label figure,
+.inputfile-6.has-focus + label figure,
+.inputfile-6 + label:hover figure {
+  background-color: #9f8465;
+}
+
+.inputfile-6 + label figure::before,
+.inputfile-6 + label figure::after {
+  width: 0;
+  height: 0;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.inputfile-6 + label figure::before {
+  border-top: 20px solid #282828;
+  border-left: 20px solid transparent;
+}
+
+.inputfile-6 + label figure::after {
+  border-bottom: 20px solid #9f8465;
+  border-right: 20px solid transparent;
+}
+
+.inputfile-6:focus + label figure::after,
+.inputfile-6.has-focus + label figure::after,
+.inputfile-6 + label:hover figure::after {
+  border-bottom-color: #c39f77;
+}
+
+.inputfile-6 + label svg {
+  width: 100%;
+  height: 100%;
+  fill: #fff;
+}
+
+/* style 7 */
+
+.inputfile-7 + label {
+  color: #c39f77;
+}
+
+.inputfile-7 + label {
+  border: 1px solid #c39f77;
+  font-size: 1rem;
+  background-color: #fff;
+  padding: 0;
+}
+
+.inputfile-7:focus + label,
+.inputfile-7.has-focus + label,
+.inputfile-7 + label:hover {
+  border-color: #9f8465;
+}
+
+.inputfile-7 + label span,
+.inputfile-7 + label strong {
+  padding: 0.625rem 1.25rem;
+}
+
+.inputfile-7 + label span {
+  width: 200px;
+  min-height: 1em;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.inputfile-7 + label strong {
+  height: 100%;
+  color: #fff;
+  background-color: #c39f77;
+  display: inline-block;
+}
+
+.inputfile-7:focus + label strong,
+.inputfile-7.has-focus + label strong,
+.inputfile-7 + label:hover strong {
+  background-color: #9f8465;
+}
+
+@media screen and (max-width: 50em) {
+.inputfile-7 + label strong {
+  display: block;
+}
+}
+/**********End File Inputs**********/
+
+.centrarCajasubir {
+
+  height: 30px;
+  position:relative;
+  left:12.4%;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+/**********pdf**********/
+.react-pdf__Page__canvas {
+  margin: 0 auto;
+  width: 100% !important;
+  height: 100% !important;
+}
+.parent{
+  width:50px;
+  height:50px;
+  float:left;
+  position:relative;
+  overflow:hidden;
+ 
+}
+
+.child{
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  bottom:0;
+  
+}
+.canvas {
+  /* Asignamos una altura mínima */
+  margin: 0 auto;
+  width: 50px !important;
+  height: 50px !important;
+}
