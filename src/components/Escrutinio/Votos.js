@@ -34,6 +34,7 @@ export default class Votos extends Component {
     titulo: "",
     url: "",
     urlbase: "",
+    iframe: "https://elecciones1.registraduria.gov.co/e14_cong_2018",
   
     partido: [],
     partido1: [],
@@ -490,10 +491,31 @@ export default class Votos extends Component {
       url:"https://cors-imagen.herokuapp.com/"+e.target.value
      
     };
+    
     await axios.post(enviroments.backendUrl + "/votos/url",params);
   
     this.setState({urlbase: params.url});
   
+    }
+
+    iframeChange= async (e) => {
+      const iframe = e.target.value;
+      var params = {
+        //por aqui voy
+        tipo: this.props.match.params.tipo,
+        departamento: this.props.match.params.departamento,
+        coddepartamento:this.props.match.params.coddepartamento,
+        municipio: this.props.match.params.municipio,
+        codmunicipio: this.props.match.params.codmunicipio,    
+        zona: this.props.match.params.zona,
+        puesto: this.props.match.params.puesto,
+        mesa: this.props.match.params.mesa,
+        iframe:e.target.value
+       
+      };
+      
+      //await axios.post(enviroments.backendUrl + "/votos/iframe",params);
+      this.setState({iframe: iframe});
     }
     urlbase= async () => {
       
@@ -542,7 +564,7 @@ export default class Votos extends Component {
    
     return (
       <>
-      
+   
         {this.rendertitulo()}
         <div className="d-flex flex-row">
           <div className="container position-relative" >
@@ -587,8 +609,11 @@ export default class Votos extends Component {
                   ></input>
                   
                 </div>
+                
                 </div>
+                
             </div>
+            
             <Document  
               file={{ url: this.state.urlbase }}
               onLoadSuccess={this.onDocumentLoadSuccess}
@@ -596,7 +621,26 @@ export default class Votos extends Component {
               <Page pageNumber={this.state.page}  />
      
             </Document>
+            <div
+                  style={{ width: "100%", height: "100%" }}
+                  className="float-sm-left"
+                >
+                  <input type="text"
+                    style={{ width: "100%", height: "50px" }}
+                   
+                    placeholder="IFRAME"
+                    name="iframe"
+                    
+                    onChange={this.iframeChange}
+                  ></input>
+                      <div class="embed-responsive embed-responsive-16by9" style={{ width: "100%", height: "500px" }}>
+  <iframe class="embed-responsive-item" src={this.state.iframe} allowfullscreen></iframe>
+</div>
+                </div>
+        
+    
           </div>
+        
 
           <div className="p-2">
             <div className="d-flex justify-content-around">
