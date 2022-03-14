@@ -34,7 +34,7 @@ export default class Votos extends Component {
     titulo: "",
     url: "",
     urlbase: "",
-    iframe: "https://elecciones1.registraduria.gov.co/e14_cong_2018",
+    iframe: "https://cors-imagen.herokuapp.com/https://divulgacione14.registraduria.gov.co",
   
     partido: [],
     partido1: [],
@@ -450,7 +450,7 @@ export default class Votos extends Component {
     
     return (
       <>
-        <div className="card" style={{ width: "300px", height: "100%" }}>
+        <div className="card" style={{ width: "400px", height: "100%" }}>
           <div className="card-body">
             <h5 className="card-title">{partido}</h5>{" "}
             {senado.map(({ id_postulante, partidos, numero, votos }) => (
